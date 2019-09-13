@@ -1,4 +1,4 @@
-import { GET_SMURFS, ADD_SMURF, ERROR } from "../actions/index";
+import { GET_SMURFS, ADD_SMURF, ERROR, START_SMURFS } from "../actions/index";
 const initialState = {
   smurfs: [],
   fetchingSmurf: false,
@@ -9,11 +9,13 @@ const initialState = {
 export const rootReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_SMURFS:
-      return { ...state, smurfs: action.payload };
+      return { ...state, fetchingSmurf: true, smurfs: action.payload };
     case ADD_SMURF:
       return { ...state, smurfs: action.payload, addingSmurf: true };
     case ERROR:
-      return { ...state, error: action.payload };
+      return { ...state, fetchingSmurf: true, error: action.payload };
+    case START_SMURFS:
+      return { ...state, fetchingSmurf: true, error: "" };
     default:
       return state;
   }

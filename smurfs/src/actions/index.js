@@ -3,6 +3,7 @@ import axios from "axios";
 export const ADD_SMURF = "ADD_SMURF";
 export const GET_SMURFS = "GET_SMURFS";
 export const ERROR = "ERROR";
+export const START_SMURFS = "START_SMURFS";
 
 export const getSmurfs = () => dispatch => {
   axios
@@ -16,7 +17,14 @@ export const getSmurfs = () => dispatch => {
     });
 };
 
+function start() {
+  return {
+    type: START_SMURFS
+  };
+}
+
 export const addSmurf = newSmurf => dispatch => {
+  dispatch(start());
   axios
     .post("http://localhost:3333/smurfs", newSmurf)
     .then(response => {
