@@ -8,7 +8,7 @@ Actions are pretty much just object with type: and payload: , reducers are essen
 
 1. What is the difference between Application state and Component state? When would be a good time to use one over the other?
 
-Application state is a data repository available to all classes and the data does not change while Component states data can change over time.
+Application state is like the store, something used in the entire app. A data repository available to all classes and the data does not change while Component states data can change over time, component state is local to that component.
 
 1. Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
 
