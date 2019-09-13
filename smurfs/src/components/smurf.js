@@ -4,9 +4,9 @@ const smurf = props => {
   console.log(props);
   return (
     <div>
-      <h1>{props.smurf.name}</h1>
-      <h1>{props.smurf.age}</h1>
-      <h1>{props.smurf.height}</h1>
+      <h3>{props.smurf.name}</h3>
+      <h4>{props.smurf.age}</h4>
+      <h5>{props.smurf.height}</h5>
     </div>
   );
 };

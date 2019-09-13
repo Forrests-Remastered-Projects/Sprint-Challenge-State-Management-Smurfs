@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addSmurf } from "./actions.js/index";
+import { addSmurf } from "../actions/index";
 
-class AddMurf extends Component {
+class AddSmurf extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,7 +40,7 @@ class AddMurf extends Component {
           onChange={this.inputHandler}
         />
         <input
-          type="number"
+          type="text"
           name="height"
           value={this.state.height}
           onChange={this.inputHandler}

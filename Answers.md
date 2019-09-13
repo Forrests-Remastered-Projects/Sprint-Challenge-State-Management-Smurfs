@@ -1,6 +1,6 @@
 1. What problem does the context API help solve?
 
-Its pretty much a component structure that lets us to send data to all levels of our app. It solves the problem of prop drilling.
+Its pretty much a component structure that lets us send data to all levels of our app. It solves the problem of prop drilling.
 
 1. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
 
